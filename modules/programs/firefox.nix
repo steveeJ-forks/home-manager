@@ -39,6 +39,12 @@ in
         default = false;
         description = "Whether to enable the Java applet plugin.";
       };
+
+      enableBluejeans = mkOption {
+        type = types.bool;
+        default = false;
+        description = "Whether to enable the Bluejeans plugin.";
+      };
     };
   };
 
@@ -53,6 +59,7 @@ in
           enableAdobeFlash = cfg.enableAdobeFlash;
           enableGoogleTalkPlugin = cfg.enableGoogleTalk;
           icedtea = cfg.enableIcedTea;
+          bluejeans = cfg.enableBluejeans;
         };
 
         wrapper = pkgs.wrapFirefox.override {
